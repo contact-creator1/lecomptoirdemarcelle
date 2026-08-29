@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr" style="background-color:#f6f1e4 !important; color-scheme: light !important;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#f6f1e4">
+<title>Le Comptoir de Marcelle — Chambéry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#221e18;--wine:#6b2a2a;--wine-deep:#521f1f;--olive:#5c6b45;--cream:#f6f1e4;--cream-deep:#ebe1c9;--white:#fffdf8;--line:rgba(34,30,24,0.13);}
+  *{margin:0;padding:0;box-sizing:border-box;forced-color-adjust:none;}
+  html{scroll-behavior:smooth;color-scheme:light;}
+  body{background-color:var(--cream) !important;color:var(--ink) !important;font-family:'Karla',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;color-scheme:light;}
+  a{color:inherit;}
+  .eyebrow{font-weight:700;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--wine);white-space:nowrap;}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;}
+  header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:3px solid var(--wine);}
+  .nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 1.5rem;gap:1rem;}
+  .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;white-space:nowrap;}
+  .brand span{color:var(--wine);font-style:italic;}
+  nav.links{display:flex;gap:1.1rem;overflow-x:auto;scrollbar-width:none;}
+  nav.links::-webkit-scrollbar{display:none;}
+  nav.links a{font-weight:600;font-size:0.68rem;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;color:#5c5648;white-space:nowrap;}
+  .call-btn{font-weight:700;font-size:0.72rem;letter-spacing:0.04em;text-transform:uppercase;background:var(--wine);color:var(--white);padding:0.55rem 0.9rem;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+  .hero{background:var(--cream-deep);padding:4.5rem 1.5rem 4rem;text-align:center;}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;}
+  .hero h1 i{color:var(--wine);font-style:italic;}
+  .hero p.sub{font-size:1.02rem;max-width:32rem;margin:1.2rem auto 0;color:#4a453a;}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:0.5rem 1.1rem;justify-content:center;margin-top:1.8rem;font-weight:600;font-size:0.78rem;color:#5c5648;}
+  .hero .meta span.dot::before{content:"·";margin:0 0.55rem;color:var(--wine);}
+  .info-strip{max-width:1180px;margin:0 auto;background:var(--white);display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 16px 36px rgba(34,30,24,0.1);}
+  .info-strip .cell{padding:1.5rem 1.4rem;border-right:1px solid var(--line);}
+  .info-strip .cell:last-child{border-right:none;}
+  .info-strip .cell .eyebrow{display:block;margin-bottom:0.5rem;}
+  .info-strip .cell .val{font-weight:600;font-size:0.92rem;}
+  .info-strip .cell .val small{display:block;font-weight:400;color:#5c5648;font-size:0.78rem;margin-top:0.15rem;}
+  section{max-width:1180px;margin:0 auto;padding:5rem 1.5rem;}
+  .section-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem;padding-bottom:1.1rem;border-bottom:2px solid var(--ink);}
+  .section-head h2{font-size:clamp(2.1rem,4vw,3rem);}
+  .subhead{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:1.4rem;color:var(--wine-deep);margin:2.4rem 0 1rem;}
+  .subhead:first-child{margin-top:0;}
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5px;background:var(--line);border:1px solid var(--line);}
+  .card{background:var(--white);padding:1.6rem 1.4rem;display:flex;flex-direction:column;gap:0.4rem;}
+  .card .top{display:flex;justify-content:space-between;align-items:baseline;gap:0.8rem;}
+  .card h3{font-family:'Karla',sans-serif;font-weight:700;font-size:1rem;}
+  .card .price{font-weight:700;font-size:0.9rem;color:var(--wine);white-space:nowrap;}
+  .card p{font-size:0.83rem;color:#5c5648;}
+  .dish-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:0.7rem 0;border-bottom:1px dotted var(--line);}
+  .dish-row:last-child{border-bottom:none;}
+  .dish-row .name{font-weight:600;font-size:0.92rem;}
+  .dish-row .price{font-weight:700;font-size:0.85rem;color:var(--wine);white-space:nowrap;}
+  .note{font-size:0.85rem;color:#5c5648;margin-top:1.2rem;border-left:3px solid var(--wine);padding-left:0.9rem;}
+  .kids-band{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--olive);padding:1.8rem 1.6rem;}
+  .kids-band h3{color:var(--olive);font-size:1.5rem;margin-bottom:0.5rem;}
+  footer{background:var(--cream-deep);color:#4a453a;padding:3.6rem 1.5rem 2.2rem;border-top:3px solid var(--wine);}
+  .foot-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.4rem;padding-bottom:2.2rem;border-bottom:1px solid var(--line);}
+  footer h3{color:var(--ink);font-size:1.9rem;margin-bottom:0.8rem;}
+  .foot-links a{display:block;text-decoration:none;font-size:0.9rem;padding:0.3rem 0;color:#4a453a;}
+  .bottom-line{max-width:1180px;margin:1.4rem auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;font-size:0.68rem;color:#8a8272;}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  @media (max-width:760px){.info-strip{grid-template-columns:1fr 1fr;}.info-strip .cell:nth-child(2){border-right:none;}.info-strip .cell{border-bottom:1px solid var(--line);}section{padding:3.4rem 1.2rem;}.foot-inner{grid-template-columns:1fr;}}
+  @media (prefers-reduced-motion: reduce){.reveal{transition:none;opacity:1;transform:none;}}
+</style>
+</head>
+<body style="background-color:#f6f1e4 !important; color:#221e18 !important;">
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">Le Comptoir <span>de Marcelle</span></div>
+    <nav class="links">
+      <a href="#plats">Nos Plats</a>
+      <a href="#desserts">Desserts</a>
+      <a href="#vins">Carte des Vins</a>
+      <a href="#boissons">Boissons</a>
+    </nav>
+    <a class="call-btn" href="#infos">Nous Trouver</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="eyebrow">Chambéry · Bistrot & Cave à Vin</span>
+  <h1>Le Comptoir <i>de Marcelle</i></h1>
+  <p class="sub">Cuisine traditionnelle et moderne inspirée des recettes de grand-mère, belle cave à vins, ambiance chaleureuse dans la vieille ville de Chambéry.</p>
+  <div class="meta"><span>Bistrot français</span><span class="dot">2 Av. des Chevaliers Tireurs</span></div>
+</section>
+
+<div class="info-strip reveal">
+  <div class="cell"><span class="eyebrow">Adresse</span><div class="val">2 Av. des Chevaliers Tireurs<br><small>73000 Chambéry</small></div></div>
+  <div class="cell"><span class="eyebrow">Ambiance</span><div class="val">Bistrot & bar à vin<br><small>Fermé samedi & dimanche</small></div></div>
+  <div class="cell"><span class="eyebrow">Spécialité</span><div class="val">Cocottes à partager<br><small>Sur réservation</small></div></div>
+  <div class="cell"><span class="eyebrow">Ce qu'on en dit</span><div class="val">Très bien noté<br><small>Google & TripAdvisor</small></div></div>
+</div>
+
+<section id="plats">
+  <div class="section-head reveal"><h2>Nos Plats</h2><span class="eyebrow">Cuisson longue & garnitures</span></div>
+  <div class="card-grid reveal">
+    <div class="card"><div class="top"><h3>Échine de Cochon Confite</h3><span class="price">24 €</span></div><p>Cuite 12 heures dans son jus au miel avant d'arriver dans vos assiettes.</p></div>
+    <div class="card"><div class="top"><h3>Côte de Cochon d'Auvergne</h3><span class="price">27 €</span></div><p>Cuisson basse température, jus de viande & beurre persillé.</p></div>
+  </div>
+  <p class="note">Garnitures au choix : gratin dauphinois, légumes rôtis de saison ou pommes de terre grenailles. Suggestion vin : Saint Amour (Beaujolais).</p>
+
+  <div class="subhead">Menu du Jour</div>
+  <p style="font-size:0.85rem;color:#8a8272;margin-bottom:0.8rem;">Du lundi au vendredi midi.</p>
+  <div class="reveal">
+    <div class="dish-row"><div class="name">Plat du Jour</div><span class="price">15,50 €</span></div>
+    <div class="dish-row"><div class="name">Entrée + Plat ou Plat + Dessert</div><span class="price">19,50 €</span></div>
+    <div class="dish-row"><div class="name">Menu Complet</div><span class="price">22,50 €</span></div>
+  </div>
+
+  <div class="kids-band reveal" style="margin-top:2rem;">
+    <h3>Menu Bambin — 12 €</h3>
+    <p style="font-size:0.87rem;color:#4a453a;">Pour les moins de douze ans : steak haché & pommes grenailles, mousse au chocolat.</p>
+  </div>
+</section>
+
+<section id="desserts">
+  <div class="section-head reveal"><h2>Desserts & Fromages</h2><span class="eyebrow">Faits maison</span></div>
+  <div class="card-grid reveal">
+    <div class="card"><div class="top"><h3>Café Gourmand</h3><span class="price">10 €</span></div></div>
+    <div class="card"><div class="top"><h3>Thé Gourmand</h3><span class="price">10 €</span></div></div>
+    <div class="card"><div class="top"><h3>Dijo Gourmand</h3><span class="price">12 €</span></div><p>Un remontant avec des desserts petits formats, pour les indécis.</p></div>
+    <div class="card"><div class="top"><h3>Les Desserts de Marcelle</h3><span class="price">9 €</span></div><p>Authentiques, faits maison, renouvelés chaque jour selon l'inspiration du moment.</p></div>
+    <div class="card"><div class="top"><h3>Faisselle d'Etrez</h3><span class="price">6 €</span></div><p>Nature, crème ou coulis, à vous de choisir.</p></div>
+    <div class="card"><div class="top"><h3>Assiette de Fromages Secs</h3><span class="price">11 €</span></div></div>
+  </div>
+</section>
+
+<section id="vins">
+  <div class="section-head reveal"><h2>La Carte des Vins</h2><span class="eyebrow">Rouge, blanc, rosé & champagne</span></div>
+
+  <div class="subhead">Rouge — Vallée du Rhône & Savoie</div>
+  <div class="reveal">
+    <div class="dish-row"><div class="name">AOC Côte du Rhône « Laurasso »</div><span class="price">24 € / 5,50 €</span></div>
+    <div class="dish-row"><div class="name">AOP Crozes Hermitage « Fleur de Syrahne »</div><span class="price">37 € / 7 €</span></div>
+    <div class="dish-row"><div class="name">AOP Chateauneuf du Pape « Clos de l'Oratoire »</div><span class="price">76 €</span></div>
+    <div class="dish-row"><div class="name">AOC Jongieux Mondeuse</div><span class="price">26 €</span></div>
+    <div class="dish-row"><div class="name">AOP Savoie Arbin Mondeuse</div><span class="price">35 €</span></div>
+  </div>
+
+  <div class="subhead">Rouge — Bourgogne & Bordeaux</div>
+  <div class="reveal">
+    <div class="dish-row"><div class="name">AOC Pommard, Domaine Joseph Drouhin</div><span class="price">98 €</span></div>
+    <div class="dish-row"><div class="name">AOC Gevrey Chambertin, Domaine Harmand Geoffroy</div><span class="price">155 €</span></div>
+    <div class="dish-row"><div class="name">AOC Saint Julien « Connétable Talbot »</div><span class="price">85 €</span></div>
+    <div class="dish-row"><div class="name">AOC Graves, Maison Dourthe</div><span class="price">39 €</span></div>
+  </div>
+
+  <div class="subhead">Blanc & Rosé</div>
+  <div class="reveal">
+    <div class="dish-row"><div class="name">AOC Jongieux Savoie</div><span class="price">24 € / 4 €</span></div>
+    <div class="dish-row"><div class="name">AOC Savoie Chignin Bergeron</div><span class="price">39 € / 7 €</span></div>
+    <div class="dish-row"><div class="name">AOP Chablis, Domaine Joseph Drouhin</div><span class="price">47 €</span></div>
+    <div class="dish-row"><div class="name">AOP Côte de Provence, Château Gassier</div><span class="price">32 € / 6,50 €</span></div>
+  </div>
+
+  <div class="subhead">Champagne & Bulles</div>
+  <div class="reveal">
+    <div class="dish-row"><div class="name">Payelle 100% Chardonnay</div><span class="price">70 €</span></div>
+    <div class="dish-row"><div class="name">Ruinard</div><span class="price">85 €</span></div>
+    <div class="dish-row"><div class="name">La Coupe de Champ</div><span class="price">10 €</span></div>
+  </div>
+  <p class="note">Carte complète disponible sur place — d'autres pépites sont dans la cave de Marcelle.</p>
+</section>
+
+<section id="boissons">
+  <div class="section-head reveal"><h2>Bières & Cocktails</h2><span class="eyebrow">Pression, cocktails & apéro</span></div>
+  <div class="card-grid reveal">
+    <div class="card"><div class="top"><h3>Warsteiner (Pression)</h3><span class="price">3,80–8,50 €</span></div><p>Nature, sirop, monaco ou picon.</p></div>
+    <div class="card"><div class="top"><h3>Les Spritz</h3><span class="price">9 €</span></div><p>Apérol, Campari, Saint Germain, Limoncello.</p></div>
+    <div class="card"><div class="top"><h3>Les Mule</h3><span class="price">9 €</span></div><p>Vodka, rhum ou gin & ginger beer.</p></div>
+    <div class="card"><div class="top"><h3>Planteur</h3><span class="price">9 €</span></div></div>
+    <div class="card"><div class="top"><h3>Cocktails Les Argotiers</h3><span class="price">10 €</span></div><p>Le Fripon, Le Velours, Le Tombeur — créations maison.</p></div>
+    <div class="card"><div class="top"><h3>Apéro & Dijo</h3><span class="price">3–9 €</span></div><p>Ricard, Martini, whisky, Don Papa, Chartreuse et plus.</p></div>
+  </div>
+</section>
+
+<section id="infos">
+  <div class="section-head reveal"><h2>Nous Trouver</h2><span class="eyebrow">Av. des Chevaliers Tireurs, Chambéry</span></div>
+  <div class="card-grid reveal">
+    <div class="card"><h3>Adresse</h3><p>2 Av. des Chevaliers Tireurs, 73000 Chambéry</p></div>
+    <div class="card"><h3>Ambiance</h3><p>Bistrot, bar à vin, plat du jour, repas de groupe.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div><h3>Le Comptoir de Marcelle</h3><p>Bistrot et cave à vin à Chambéry, 2 Av. des Chevaliers Tireurs.</p></div>
+    <div class="foot-links"><span class="eyebrow">Explorer</span><a href="#plats">Nos Plats</a><a href="#vins">Carte des Vins</a><a href="#boissons">Boissons</a></div>
+    <div class="foot-links"><span class="eyebrow">Contact</span><a href="https://www.google.com/maps/search/?api=1&query=2+Av.+des+Chevaliers+Tireurs+73000+Chambery" target="_blank" rel="noopener">Itinéraire</a></div>
+  </div>
+  <div class="bottom-line"><span>Le Comptoir de Marcelle — Chambéry</span><span>Cuisine de grand-mère & belle cave</span></div>
+</footer>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:0.1});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>
+</body>
+</html>
